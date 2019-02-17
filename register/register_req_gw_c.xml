@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE scenario SYSTEM "sipp.dtd">
+
+<scenario name="Request Gateway Controller">
+  <send crlf="true">
+    <![CDATA[
+    REGISTER sip:127.0.0.1:5060;transport=tcp SIP/2.0
+    Via: SIP/2.0/TCP 192.168.5.33:38471;branch=z9hG4bK04e1e2ce6fc8038c;rport
+    Contact: <sip:ali-0xa9e9b0@192.168.5.34:38471;transport=tcp>;expires=3653;+sip.instance="<urn:uuid:ed6b918d-d9c0-bded-f75c-8ad349019c09>"
+    Max-Forwards: 70
+    To: <sip:ali@127.0.0.1:5060>
+    From: <sip:ali@127.0.0.1:5060>;tag=2d7fd1b56099cb13
+    Call-ID: 294057a0bc50cc9c
+    CSeq: 29911 REGISTER
+    User-Agent: baresip v0.6.0 (x86_64/linux)
+    Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+    Content-Length: 0
+
+    ]]>
+  </send>
+  <sendCmd dest="s">
+    <![CDATA[
+      SALAM
+    ]]>
+  </sendCmd>
+</scenario>

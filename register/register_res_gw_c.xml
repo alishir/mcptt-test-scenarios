@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE scenario SYSTEM "sipp.dtd">
+
+<scenario name="Request Gateway Controller">
+  <recvCmd src="m">
+    <action>
+      <log message="Dump: salam"/>
+    </action>
+  </recvCmd>
+  <recv response="200"/>
+</scenario>
