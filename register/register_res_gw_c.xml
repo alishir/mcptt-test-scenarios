@@ -4,7 +4,10 @@
 <scenario name="Request Gateway Controller">
   <recvCmd src="m">
     <action>
-      <log message="Dump: salam"/>
+      <ereg regexp="Content-Type:.*"
+        search_in="msg"
+        assign_to="2"/>
+      <log message="Dump: [$2]"/>
     </action>
   </recvCmd>
   <recv response="200"/>
