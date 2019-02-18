@@ -3,12 +3,21 @@
 
 <scenario name="Request Gateway Controller">
   <recvCmd src="m">
+  </recvCmd>
+  <recv response="200" crlf="true">
     <action>
       <ereg regexp="Content-Type:.*"
         search_in="msg"
-        assign_to="2"/>
-      <log message="Dump: [$2]"/>
+        assign_to="2" />
     </action>
-  </recvCmd>
-  <recv response="200"/>
+  </recv>
+  <pause milliseconds="10"/>
+  <sendCmd dest="m">
+    <![CDATA[
+    From: s
+    Call-ID: [last_call_id]
+    [$2]
+
+    ]]>
+  </sendCmd>
 </scenario>

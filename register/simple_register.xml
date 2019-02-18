@@ -18,13 +18,6 @@
 
     ]]>
   </send>
-  <sendCmd dest="s">
-    <![CDATA[
-    From: m
-    Call-ID: [call_id] 
-
-    ]]>
-  </sendCmd>
-  <recvCmd src="s">
-  </recvCmd>
+  <recv response="200" crlf="true">
+  </recv>
 </scenario>
