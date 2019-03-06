@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE scenario SYSTEM "sipp.dtd">
+
+<scenario name="Group Call Originator">
+  <send>
+    <![CDATA[
+    REGISTER sip:[service]@[remote_ip]:[remote_port];transport=[transport] SIP/2.0
+    Via: SIP/2.0/[transport] [local_ip]:[local_port];branch=[branch]
+    Contact: <sip:mcptt_c3@[local_ip]:[local_port]>
+    Max-Forwards: 70
+    To: MCPTT-Server <sip:[service]@[remote_ip]:[remote_port]>
+    From: mcptt_c3 <sip:mcptt_c3@[local_ip]:[local_port]>;tag=[call_number]
+    Call-ID: [call_id] 
+    CSeq: [cseq] REGISTER
+    User-Agent: MCPTT-UA 
+    Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+    Content-Length: 0
+
+    ]]>
+  </send>
+  <recv response="200"/>
+  <pause milliseconds="5000"/>
+</scenario>
