@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!DOCTYPE scenario SYSTEM "sipp.dtd">
 
-<scenario name="Group Call Originator">
+<scenario name="Group Call Client 3">
   <send>
     <![CDATA[
     REGISTER sip:[service]@[remote_ip]:[remote_port];transport=[transport] SIP/2.0
@@ -19,5 +19,28 @@
     ]]>
   </send>
   <recv response="200"/>
-  <pause milliseconds="5000"/>
+  <!-- wait for group call request -->
+  <recv request="INVITE">
+    <action>
+      <ereg regexp=".*" search_in="hdr" header="CSeq:" check_it="true" assign_to="1" />
+      <log message="cseq is [$1]"/>
+    </action>
+  </recv>
+  <send>
+    <![CDATA[
+    SIP/2.0 200 OK
+    Via: SIP/2.0/[transport] [local_ip]:[local_port];branch=[branch]
+    Contact: <sip:mcptt_c3@[local_ip]:[local_port]>
+    Max-Forwards: 70
+    To: MCPTT-Server <sip:[service]@[remote_ip]:[remote_port]>
+    From: mcptt_c3 <sip:mcptt_c3@[local_ip]:[local_port]>;tag=[call_number]
+    Call-ID: [call_id] 
+    CSeq: [$1]
+    User-Agent: MCPTT-UA 
+    Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+    Content-Length: 0
+
+    ]]>
+  </send>
+  <pause milliseconds="3000"/>
 </scenario>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!DOCTYPE scenario SYSTEM "sipp.dtd">
 
-<scenario name="Group Call Originator">
+<scenario name="Group Call Client 2">
   <send>
     <![CDATA[
     REGISTER sip:[service]@[remote_ip]:[remote_port];transport=[transport] SIP/2.0
@@ -19,7 +19,6 @@
     ]]>
   </send>
   <recv response="200"/>
-  <pause milliseconds="1000"/>
   <!-- wait for group call request -->
   <recv request="INVITE">
     <action>
