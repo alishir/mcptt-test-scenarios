@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE scenario SYSTEM "sipp.dtd">
+
+<scenario name="Group Call Originator">
+  <send>
+    <![CDATA[
+    REGISTER sip:[service]@[remote_ip]:[remote_port];transport=[transport] SIP/2.0
+    Via: SIP/2.0/[transport] [local_ip]:[local_port];branch=[branch]
+    Contact: <sip:mcptt_c1@[local_ip]:[local_port]>
+    Max-Forwards: 70
+    To: MCPTT-Server <sip:[service]@[remote_ip]:[remote_port]>
+    From: mcptt_c1 <sip:mcptt_c1@[local_ip]:[local_port]>;tag=[call_number]
+    Call-ID: [call_id] 
+    CSeq: [cseq] REGISTER
+    User-Agent: MCPTT-UA 
+    Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+    Content-Length: 0
+
+    ]]>
+  </send>
+  <recv response="200"/>
+  <pause milliseconds="5000"/>
+
+  <!-- Initiate group call -->
+  <send>
+    <![CDATA[
+    INVITE sip:MCPTT@[remote_ip]:[remote_port];transport=[transport] SIP/2.0
+    Via: SIP/2.0/[transport] [local_ip]:[local_port];branch=[branch]
+    Contact: <sip:mcptt_c1@[local_ip]:[local_port]>
+    Max-Forwards: 70
+    To: MCPTT-Server <sip:[service]@[remote_ip]:[remote_port]>
+    From: mcptt_c1 <sip:mcptt_c1@[local_ip]:[local_port]>;tag=[call_number]
+    Call-ID: [call_id] 
+    CSeq: [cseq] INVITE 
+    User-Agent: MCPTT-UA 
+    Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+    Content-Length: 0
+
+    ]]>
+  </send>
+  <recv response="200"/>
+  <send>
+    <![CDATA[
+    ACK sip:MCPTT@[remote_ip]:[remote_port];transport=[transport] SIP/2.0
+    Via: SIP/2.0/[transport] [local_ip]:[local_port];branch=[branch]
+    Contact: <sip:mcptt_c1@[local_ip]:[local_port]>
+    Max-Forwards: 70
+    To: MCPTT-Server <sip:[service]@[remote_ip]:[remote_port]>[peer_tag_param]
+    From: mcptt_c1 <sip:mcptt_c1@[local_ip]:[local_port]>;tag=[call_number]
+    Call-ID: [call_id] 
+    CSeq: [cseq] ACK 
+    User-Agent: MCPTT-UA 
+    Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+    Content-Length: 0
+
+    ]]>
+  </send>
+
+  <nop>
+    <action>
+      <exec rtp_stream="file.wav"/>
+    </action>
+  </nop>
+  <pause milliseconds="10000"/>
+
+  <send>
+    <![CDATA[
+    BYE sip:MCPTT@[remote_ip]:[remote_port];transport=[transport] SIP/2.0
+    Via: SIP/2.0/[transport] [local_ip]:[local_port];branch=[branch]
+    Contact: <sip:mcptt_c1@[local_ip]:[local_port]>
+    Max-Forwards: 70
+    To: MCPTT-Server <sip:[service]@[remote_ip]:[remote_port]>[peer_tag_param]
+    From: mcptt_c1 <sip:mcptt_c1@[local_ip]:[local_port]>;tag=[call_number]
+    Call-ID: [call_id] 
+    CSeq: [cseq] BYE 
+    User-Agent: MCPTT-UA 
+    Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+    Content-Length: 0
+
+    ]]>
+  </send>
+</scenario>
