@@ -29,13 +29,13 @@
   <send>
     <![CDATA[
     SIP/2.0 200 OK
-    Via: SIP/2.0/[transport] [local_ip]:[local_port];branch=[branch]
-    Contact: <sip:mcptt_c3@[local_ip]:[local_port]>
+    [last_Via]
+    Contact: <sip:mcptt_c2@[local_ip]:[local_port]>
     Max-Forwards: 70
-    To: MCPTT-Server <sip:[service]@[remote_ip]:[remote_port]>
-    From: mcptt_c3 <sip:mcptt_c3@[local_ip]:[local_port]>;tag=[call_number]
-    Call-ID: [call_id] 
-    CSeq: [$1]
+    [last_To];tag=[call_number]
+    [last_From]
+    [last_Call-ID]
+    [last_cseq]
     User-Agent: MCPTT-UA 
     Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
     Content-Length: 0
