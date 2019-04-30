@@ -67,7 +67,7 @@
 
   <nop>
     <action>
-      <exec rtp_stream="file.wav"/>
+      <exec rtp_stream="file.wav,4"/>
     </action>
   </nop>
   <pause milliseconds="10000"/>
@@ -88,4 +88,5 @@
 
     ]]>
   </send>
+  <recv response="200"/>
 </scenario>
