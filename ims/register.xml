@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE scenario SYSTEM "sipp.dtd">
+
+<scenario name="Simple UA Registeration to clearwater IMS">
+  <send crlf="true">
+    <![CDATA[
+    REGISTER sip:example.com;transport=tcp SIP/2.0
+    Via: SIP/2.0/TCP [local_ip]:[local_port];branch=[branch]
+    Contact: <sip:mcptt_c1@[local_ip]:[local_port]>
+    Max-Forwards: 70
+    To: <sip:6505550462@example.com>
+    From: <sip:6505550462@example.com>;tag=[call_number]
+    Call-ID: [call_id] 
+    CSeq: [cseq] REGISTER
+    User-Agent: MCPTT-UA 
+    Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+    Content-Length: 0
+
+    ]]>
+  </send>
+  <recv response="401" auth="true" crlf="true"/>
+  <send crlf="true">
+    <![CDATA[
+    REGISTER sip:example.com;transport=tcp SIP/2.0
+    Via: SIP/2.0/TCP [local_ip]:[local_port];branch=[branch]
+    Contact: <sip:mcptt_c1@[local_ip]:[local_port]>
+    Max-Forwards: 70
+    To: <sip:6505550462@example.com>
+    From: <sip:6505550462@example.com>;tag=[call_number]
+    [authentication]
+    Call-ID: [call_id] 
+    CSeq: [cseq] REGISTER
+    User-Agent: MCPTT-UA 
+    Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+    Content-Length: 0
+
+    ]]>
+  </send>
+  <recv response="200" crlf="true"/>
+</scenario>
