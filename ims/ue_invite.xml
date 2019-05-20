@@ -8,8 +8,8 @@
     Via: SIP/2.0/TCP [local_ip]:[local_port];branch=[branch]
     Contact: <sip:mcptt_c1@[local_ip]:[local_port]>
     Max-Forwards: 70
-    To: <sip:6505550462@example.com>
-    From: <sip:6505550462@example.com>;tag=[call_number]
+    To: <sip:[field0]@example.com>
+    From: <sip:[field0]@example.com>;tag=[call_number]
     Call-ID: [call_id] 
     CSeq: [cseq] REGISTER
     User-Agent: MCPTT-UA 
@@ -25,9 +25,9 @@
     Via: SIP/2.0/TCP [local_ip]:[local_port];branch=[branch]
     Contact: <sip:mcptt_c1@[local_ip]:[local_port]>
     Max-Forwards: 70
-    To: <sip:6505550462@example.com>
-    From: <sip:6505550462@example.com>;tag=[call_number]
-    [authentication]
+    To: <sip:[field0]@example.com>
+    From: <sip:[field0]@example.com>;tag=[call_number]
+    [field1]
     Call-ID: [call_id] 
     CSeq: [cseq] REGISTER
     User-Agent: MCPTT-UA 
@@ -37,4 +37,21 @@
     ]]>
   </send>
   <recv response="200" crlf="true"/>
+  <send crlf="true">
+    <![CDATA[
+    INVITE sip:example.com;transport=tcp SIP/2.0
+    Via: SIP/2.0/TCP [local_ip]:[local_port];branch=[branch]
+    Contact: <sip:mcptt_c1@[local_ip]:[local_port]>
+    Max-Forwards: 70
+    To: <sip:[field0]@example.com>
+    From: <sip:[field0]@example.com>;tag=[call_number]
+    [field1]
+    Call-ID: [call_id] 
+    CSeq: [cseq] INVITE
+    User-Agent: MCPTT-UA 
+    Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+    Content-Length: 0
+
+    ]]>
+  </send>
 </scenario>
