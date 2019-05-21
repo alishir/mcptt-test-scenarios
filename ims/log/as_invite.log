@@ -1,0 +1,43 @@
+----------------------------------------------- 2019-05-21 15:08:46.780244
+TCP message received [1497] bytes :
+
+INVITE sip:example.com;transport=tcp SIP/2.0
+Route: <sip:192.168.1.21:6050;lr>
+Route: <sip:odi_7V/Eqy//9X@172.18.0.5:5054;lr;orig;service=scscf>
+Record-Route: <sip:sprout:5054;transport=tcp;lr;billing-role=charge-orig>
+Record-Route: <sip:172.18.0.6:5058;transport=TCP;lr>
+Record-Route: <sip:4NuWAcM26s@172.18.0.6:5060;transport=TCP;lr>
+Via: SIP/2.0/TCP 172.18.0.5:5052;rport;branch=z9hG4bKPjVFpCx.yu4Ssr8JUKD57C.rPAkZb8di2Q
+Via: SIP/2.0/TCP mmtel.sprout;branch=z9hG4bKPjgdVB0ynEvpk7w2DNAWH02kEImof38hot
+Via: SIP/2.0/TCP scscf.sprout;branch=z9hG4bKPj5ktDY4t1YwgVNhkZ3pcZQ66te08uTKqx
+Via: SIP/2.0/TCP 172.18.0.6:5058;rport=35275;received=172.18.0.6;branch=z9hG4bKPj86mQC4d71DctwSt-oRYA1wUqEjceu214
+Via: SIP/2.0/TCP 127.0.1.1:5060;received=10.189.219.4;branch=z9hG4bK-18187-1-4
+Contact: <sip:mcptt_c1@127.0.1.1:5060>
+Max-Forwards: 67
+To: <sip:6505550193@example.com>
+From: <sip:6505550193@example.com>;tag=1
+Authorization: Digest response="4ae9443f337884fe477ab1a4d526409f", username="6505550193@example.com", realm="example.com", nonce="6e27edc262f3e6ff", uri="sip:192.168.1.21:5060", algorithm=MD5, cnonce="327b23c6", opaque="0c3a763f1b37905f", qop=auth, nc=00000001
+Call-ID: 1-18187@127.0.1.1
+CSeq: 3 INVITE
+User-Agent: MCPTT-UA
+Allow: INVITE, ACK, BYE, CANCEL, OPTIONS, NOTIFY, SUBSCRIBE, INFO, MESSAGE, REFER
+P-Asserted-Identity: <sip:6505550193@example.com>
+Session-Expires: 600
+P-Served-User: <sip:6505550193@example.com>;sescase=orig;regstate=reg
+Content-Length:  0
+
+
+----------------------------------------------- 2019-05-21 15:08:46.780670
+TCP message sent (662 bytes):
+
+SIP/2.0 200 OK
+Via: SIP/2.0/TCP 172.18.0.5:5052;rport;branch=z9hG4bKPjVFpCx.yu4Ssr8JUKD57C.rPAkZb8di2Q, SIP/2.0/TCP mmtel.sprout;branch=z9hG4bKPjgdVB0ynEvpk7w2DNAWH02kEImof38hot, SIP/2.0/TCP scscf.sprout;branch=z9hG4bKPj5ktDY4t1YwgVNhkZ3pcZQ66te08uTKqx, SIP/2.0/TCP 172.18.0.6:5058;rport=35275;received=172.18.0.6;branch=z9hG4bKPj86mQC4d71DctwSt-oRYA1wUqEjceu214, SIP/2.0/TCP 127.0.1.1:5060;received=10.189.219.4;branch=z9hG4bK-18187-1-4
+From: <sip:6505550193@example.com>;tag=1
+To: <sip:6505550193@example.com>;tag=29286SIPpTag011
+Call-ID: 1-18187@127.0.1.1
+CSeq: 3 INVITE
+Contact: <sip:127.0.1.1:6050;transport=TCP>
+Salam: alishir
+Content-Length: 0
+
+

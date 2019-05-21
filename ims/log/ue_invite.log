@@ -1,0 +1,97 @@
+Problem EAGAIN on socket  6 and poll_idx  is 1 
+Added first buffered message to socket 6
+Problem EWOULDBLOCK on socket  6 and poll_idx  is 1 
+Exit problem event on socket 6 
+Wrote 403 of 403 bytes in an output buffer.
+----------------------------------------------- 2019-05-21 16:22:08.836870
+TCP message received [419] bytes :
+
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/TCP 127.0.1.1:5060;received=10.189.219.4;branch=z9hG4bK-22147-1-0
+Call-ID: 1-22147@127.0.1.1
+From: <sip:6505550193@example.com>;tag=1
+To: <sip:6505550193@example.com>;tag=z9hG4bKPjKxzF9NGlQ9o8bNtIJaO2omQ1nWs69ZY4
+CSeq: 1 REGISTER
+WWW-Authenticate: Digest  realm="example.com",nonce="01fb096e2e4e45e0",opaque="56c238a15466a7ce",algorithm=MD5,qop="auth"
+Content-Length:  0
+
+
+----------------------------------------------- 2019-05-21 16:22:08.837002
+TCP message sent (656 bytes):
+
+REGISTER sip:example.com;transport=tcp SIP/2.0
+Via: SIP/2.0/TCP 127.0.1.1:5060;branch=z9hG4bK-22147-1-2
+Contact: <sip:mcptt_c1@127.0.1.1:5060>
+Max-Forwards: 70
+To: <sip:6505550193@example.com>
+From: <sip:6505550193@example.com>;tag=1
+Authorization: Digest username="6505550193@example.com",realm="example.com",cnonce="6b8b4567",nc=00000001,qop=auth,uri="sip:192.168.1.21:5060",nonce="01fb096e2e4e45e0",response="ee451893b00569bd0360e9d9345d2f23",algorithm=MD5,opaque="56c238a15466a7ce"
+Call-ID: 1-22147@127.0.1.1
+CSeq: 2 REGISTER
+User-Agent: MCPTT-UA
+Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+Content-Length: 0
+
+
+----------------------------------------------- 2019-05-21 16:22:09.246294
+TCP message received [580] bytes :
+
+SIP/2.0 200 OK
+Service-Route: <sip:sprout:5054;transport=tcp;lr;orig;username=6505550193%40example.com;nonce=01fb096e2e4e45e0>
+Via: SIP/2.0/TCP 127.0.1.1:5060;received=10.189.219.4;branch=z9hG4bK-22147-1-2
+Call-ID: 1-22147@127.0.1.1
+From: <sip:6505550193@example.com>;tag=1
+To: <sip:6505550193@example.com>;tag=z9hG4bKPjhqB0fT.XUTu0WQaTU2uDsw.CRv-5U6Tf
+CSeq: 2 REGISTER
+Supported: outbound
+Contact: <sip:mcptt_c1@127.0.1.1:5060>;expires=300
+Path: <sip:qRA8zFiQ8T@172.18.0.6:5058;transport=TCP;lr;ob>
+P-Associated-URI: <sip:6505550193@example.com>
+Content-Length:  0
+
+
+----------------------------------------------- 2019-05-21 16:22:09.246363
+TCP message sent (652 bytes):
+
+INVITE sip:example.com;transport=tcp SIP/2.0
+Via: SIP/2.0/TCP 127.0.1.1:5060;branch=z9hG4bK-22147-1-4
+Contact: <sip:mcptt_c1@127.0.1.1:5060>
+Max-Forwards: 70
+To: <sip:6505550193@example.com>
+From: <sip:6505550193@example.com>;tag=1
+Authorization: Digest username="6505550193@example.com",realm="example.com",cnonce="327b23c6",nc=00000001,qop=auth,uri="sip:192.168.1.21:5060",nonce="01fb096e2e4e45e0",response="0f2aea5fded27e53c47f8e5c16ff10fb",algorithm=MD5,opaque="56c238a15466a7ce"
+Call-ID: 1-22147@127.0.1.1
+CSeq: 3 INVITE
+User-Agent: MCPTT-UA
+Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+Content-Length: 0
+
+
+----------------------------------------------- 2019-05-21 16:22:09.319397
+TCP message received [361] bytes :
+
+SIP/2.0 100 Trying
+Via: SIP/2.0/TCP 127.0.1.1:5060;received=10.189.219.4;branch=z9hG4bK-22147-1-4
+Record-Route: <sip:172.18.0.6:5058;transport=TCP;lr>
+Record-Route: <sip:qRA8zFiQ8T@172.18.0.6:5060;transport=TCP;lr>
+Call-ID: 1-22147@127.0.1.1
+From: <sip:6505550193@example.com>;tag=1
+To: <sip:6505550193@example.com>
+CSeq: 3 INVITE
+Content-Length:  0
+
+
+----------------------------------------------- 2019-05-21 16:22:09.553663
+TCP message received [319] bytes :
+
+SIP/2.0 200 OK
+Via: SIP/2.0/TCP 127.0.1.1:5060;received=10.189.219.4;branch=z9hG4bK-22147-1-4
+From: <sip:6505550193@example.com>;tag=1
+To: <sip:6505550193@example.com>;tag=18850SIPpTag011
+Call-ID: 1-22147@127.0.1.1
+CSeq: 3 INVITE
+Contact: <sip:127.0.1.1:6050;transport=TCP>
+Salam: alishir
+Content-Length:  0
+
+
