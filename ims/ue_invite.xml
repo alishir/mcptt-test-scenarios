@@ -54,4 +54,6 @@
 
     ]]>
   </send>
+  <recv response="100"/>
+  <recv response="200"/>
 </scenario>
