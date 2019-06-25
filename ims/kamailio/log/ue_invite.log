@@ -1,0 +1,16 @@
+----------------------------------------------- 2019-06-15 16:26:26.483906
+UDP message sent (362 bytes):
+
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 10.189.219.4:5060;branch=z9hG4bK-32365-1-0
+Contact: <sip:mcptt_c1@10.189.219.4:5060>
+Max-Forwards: 70
+To: <sip:ali@127.0.0.1>
+From: <sip:ali@127.0.0.1>;tag=1
+Call-ID: 1-32365@10.189.219.4
+CSeq: 0 REGISTER
+User-Agent: MCPTT-UA
+Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+Content-Length: 0
+
+

@@ -1,0 +1,139 @@
+----------------------------------------------- 2019-06-12 17:10:50.517649
+UDP message sent (392 bytes):
+
+REGISTER sip:192.168.1.21;transport=UDP SIP/2.0
+Via: SIP/2.0/UDP 10.189.219.4:5060;branch=z9hG4bK-993-1-0
+Contact: <sip:ann@10.189.219.4:5060>
+Max-Forwards: 70
+To: <sip:ann@192.168.1.21>
+From: <sip:ann@192.168.1.21>;tag=1
+Call-ID: 1-993@10.189.219.4
+CSeq: 1 REGISTER
+User-Agent: MCPTT-UA
+Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+Content-Length: 0
+
+
+----------------------------------------------- 2019-06-12 17:10:50.562013
+UDP message received [405] bytes :
+
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 10.189.219.4:5060;branch=z9hG4bK-993-1-0;rport=5060
+To: <sip:ann@192.168.1.21>;tag=9dd61ff61e802d8e2bef5f14621ef3c2.5ce6
+From: <sip:ann@192.168.1.21>;tag=1
+Call-ID: 1-993@10.189.219.4
+CSeq: 1 REGISTER
+WWW-Authenticate: Digest realm="192.168.1.21", nonce="XQDz/l0A8tKJF4rBVnsVCLrZYPcmSckt"
+Server: kamailio (5.3.0-dev5 (x86_64/linux))
+Content-Length: 0
+
+
+----------------------------------------------- 2019-06-12 17:10:50.562094
+UDP message sent (591 bytes):
+
+REGISTER sip:192.168.1.21;transport=UDP SIP/2.0
+Via: SIP/2.0/UDP 10.189.219.4:5060;branch=z9hG4bK-993-1-2
+Contact: <sip:ann@10.189.219.4:5060>
+Max-Forwards: 70
+To: <sip:ann@192.168.1.21>
+From: <sip:ann@192.168.1.21>;tag=1
+Authorization: Digest username="ann@192.168.1.21",realm="192.168.1.21",uri="sip:192.168.1.21:5060",nonce="XQDz/l0A8tKJF4rBVnsVCLrZYPcmSckt",response="e78368ddfe3b7cd98170ea49f53f83b4",algorithm=MD5
+Call-ID: 1-993@10.189.219.4
+CSeq: 2 REGISTER
+User-Agent: MCPTT-UA
+Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+Content-Length: 0
+
+
+----------------------------------------------- 2019-06-12 17:10:50.609366
+UDP message received [357] bytes :
+
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 10.189.219.4:5060;branch=z9hG4bK-993-1-2;rport=5060
+To: <sip:ann@192.168.1.21>;tag=9dd61ff61e802d8e2bef5f14621ef3c2.7dd4
+From: <sip:ann@192.168.1.21>;tag=1
+Call-ID: 1-993@10.189.219.4
+CSeq: 2 REGISTER
+Contact: <sip:ann@10.189.219.4:5060>;expires=3600
+Server: kamailio (5.3.0-dev5 (x86_64/linux))
+Content-Length: 0
+
+
+----------------------------------------------- 2019-06-12 17:10:53.701988
+UDP message received [685] bytes :
+
+INVITE sip:ann@10.189.219.4:5060 SIP/2.0
+Record-Route: <sip:192.168.1.21;lr>
+Via: SIP/2.0/UDP 192.168.1.21;branch=z9hG4bKfab.7eff044ae2cea4272454cd83741f1fff.0
+Via: SIP/2.0/UDP 10.189.219.4:5061;rport=5061;branch=z9hG4bK-995-1-6
+Contact: <sip:mcptt_c1@10.189.219.4:5061>
+Max-Forwards: 69
+To: <sip:ali@127.0.0.1>
+From: <sip:ali@127.0.0.1>;tag=1
+Call-ID: 1-995@10.189.219.4
+CSeq: 4 INVITE
+User-Agent: MCPTT-UA
+Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+Content-Type: application/sdp
+Content-Length:   136
+
+v=0
+o=user1 53655765 2353687637 IN IP4 10.189.219.4
+s=-
+c=IN IP4 10.189.219.4
+t=0 0
+m=audio 12345 RTP/AVP 8
+a=rtpmap:8 PCMA/8000
+
+----------------------------------------------- 2019-06-12 17:10:54.204017
+UDP message received [685] bytes :
+
+INVITE sip:ann@10.189.219.4:5060 SIP/2.0
+Record-Route: <sip:192.168.1.21;lr>
+Via: SIP/2.0/UDP 192.168.1.21;branch=z9hG4bKfab.7eff044ae2cea4272454cd83741f1fff.0
+Via: SIP/2.0/UDP 10.189.219.4:5061;rport=5061;branch=z9hG4bK-995-1-6
+Contact: <sip:mcptt_c1@10.189.219.4:5061>
+Max-Forwards: 69
+To: <sip:ali@127.0.0.1>
+From: <sip:ali@127.0.0.1>;tag=1
+Call-ID: 1-995@10.189.219.4
+CSeq: 4 INVITE
+User-Agent: MCPTT-UA
+Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+Content-Type: application/sdp
+Content-Length:   136
+
+v=0
+o=user1 53655765 2353687637 IN IP4 10.189.219.4
+s=-
+c=IN IP4 10.189.219.4
+t=0 0
+m=audio 12345 RTP/AVP 8
+a=rtpmap:8 PCMA/8000
+
+----------------------------------------------- 2019-06-12 17:10:55.227916
+UDP message received [685] bytes :
+
+INVITE sip:ann@10.189.219.4:5060 SIP/2.0
+Record-Route: <sip:192.168.1.21;lr>
+Via: SIP/2.0/UDP 192.168.1.21;branch=z9hG4bKfab.7eff044ae2cea4272454cd83741f1fff.0
+Via: SIP/2.0/UDP 10.189.219.4:5061;rport=5061;branch=z9hG4bK-995-1-6
+Contact: <sip:mcptt_c1@10.189.219.4:5061>
+Max-Forwards: 69
+To: <sip:ali@127.0.0.1>
+From: <sip:ali@127.0.0.1>;tag=1
+Call-ID: 1-995@10.189.219.4
+CSeq: 4 INVITE
+User-Agent: MCPTT-UA
+Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+Content-Type: application/sdp
+Content-Length:   136
+
+v=0
+o=user1 53655765 2353687637 IN IP4 10.189.219.4
+s=-
+c=IN IP4 10.189.219.4
+t=0 0
+m=audio 12345 RTP/AVP 8
+a=rtpmap:8 PCMA/8000
+

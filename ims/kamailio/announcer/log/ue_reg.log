@@ -1,0 +1,69 @@
+Problem EAGAIN on socket  7 and poll_idx  is 2 
+Exit problem event on socket 7 
+----------------------------------------------- 2019-06-12 17:42:19.733900
+UDP message sent (394 bytes):
+
+REGISTER sip:192.168.1.21;transport=UDP SIP/2.0
+Via: SIP/2.0/UDP 10.189.219.4:5080;branch=z9hG4bK-7164-1-0
+Contact: <sip:ann@10.189.219.4:5080>
+Max-Forwards: 70
+To: <sip:ann@192.168.1.21>
+From: <sip:ann@192.168.1.21>;tag=1
+Call-ID: 1-7164@10.189.219.4
+CSeq: 1 REGISTER
+User-Agent: MCPTT-UA
+Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+Content-Length: 0
+
+
+----------------------------------------------- 2019-06-12 17:42:19.783284
+UDP message received [407] bytes :
+
+SIP/2.0 401 Unauthorized
+Via: SIP/2.0/UDP 10.189.219.4:5080;branch=z9hG4bK-7164-1-0;rport=5060
+To: <sip:ann@192.168.1.21>;tag=9dd61ff61e802d8e2bef5f14621ef3c2.303e
+From: <sip:ann@192.168.1.21>;tag=1
+Call-ID: 1-7164@10.189.219.4
+CSeq: 1 REGISTER
+WWW-Authenticate: Digest realm="192.168.1.21", nonce="XQD7X10A+jMq1MwwhuDLv+BayKbOSh6y"
+Server: kamailio (5.3.0-dev5 (x86_64/linux))
+Content-Length: 0
+
+
+----------------------------------------------- 2019-06-12 17:42:19.783374
+UDP message sent (593 bytes):
+
+REGISTER sip:192.168.1.21;transport=UDP SIP/2.0
+Via: SIP/2.0/UDP 10.189.219.4:5080;branch=z9hG4bK-7164-1-2
+Contact: <sip:ann@10.189.219.4:5080>
+Max-Forwards: 70
+To: <sip:ann@192.168.1.21>
+From: <sip:ann@192.168.1.21>;tag=1
+Authorization: Digest username="ann@192.168.1.21",realm="192.168.1.21",uri="sip:192.168.1.21:5060",nonce="XQD7X10A+jMq1MwwhuDLv+BayKbOSh6y",response="7b47e8b10f289f3690d23e653c67b23c",algorithm=MD5
+Call-ID: 1-7164@10.189.219.4
+CSeq: 2 REGISTER
+User-Agent: MCPTT-UA
+Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+Content-Length: 0
+
+
+----------------------------------------------- 2019-06-12 17:42:19.835037
+UDP message received [359] bytes :
+
+SIP/2.0 200 OK
+Via: SIP/2.0/UDP 10.189.219.4:5080;branch=z9hG4bK-7164-1-2;rport=5060
+To: <sip:ann@192.168.1.21>;tag=9dd61ff61e802d8e2bef5f14621ef3c2.110c
+From: <sip:ann@192.168.1.21>;tag=1
+Call-ID: 1-7164@10.189.219.4
+CSeq: 2 REGISTER
+Contact: <sip:ann@10.189.219.4:5080>;expires=3600
+Server: kamailio (5.3.0-dev5 (x86_64/linux))
+Content-Length: 0
+
+
+----------------------------------------------- 2019-06-12 17:42:19.835090
+TCP control message sent (12 bytes):
+
+From: m
+
+

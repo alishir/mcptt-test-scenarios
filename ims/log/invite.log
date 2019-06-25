@@ -1,0 +1,16 @@
+----------------------------------------------- 2019-06-25 10:27:33.813583
+UDP message sent (412 bytes):
+
+REGISTER sip:example.com;transport=tcp SIP/2.0
+Via: SIP/2.0/TCP 10.189.219.4:5060;branch=z9hG4bK-18220-1-0
+Contact: <sip:mcptt_c1@10.189.219.4:5060>
+Max-Forwards: 70
+To: <sip:6505550416@example.com>
+From: <sip:6505550416@example.com>;tag=1
+Call-ID: 1-18220@10.189.219.4
+CSeq: 1 REGISTER
+User-Agent: MCPTT-UA
+Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+Content-Length: 0
+
+

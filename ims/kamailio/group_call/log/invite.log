@@ -1,0 +1,264 @@
+----------------------------------------------- 2019-06-19 18:39:24.297253
+UDP message sent (565 bytes):
+
+INVITE sip:mcptt@127.0.0.1;transport=UDP SIP/2.0
+Via: SIP/2.0/UDP 10.189.219.4:5061;branch=z9hG4bK-16465-1-0
+Contact: <sip:mcptt_c1@10.189.219.4:5061>
+Max-Forwards: 70
+To: <sip:ali@127.0.0.1>
+From: <sip:ali@127.0.0.1>;tag=1
+Call-ID: 1-16465@10.189.219.4
+CSeq: 1 INVITE
+User-Agent: MCPTT-UA
+Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+Content-Type: application/sdp
+Content-Length:   136
+
+v=0
+o=user1 53655765 2353687637 IN IP4 10.189.219.4
+s=-
+c=IN IP4 10.189.219.4
+t=0 0
+m=audio 12345 RTP/AVP 8
+a=rtpmap:8 PCMA/8000
+
+----------------------------------------------- 2019-06-19 18:39:24.297947
+UDP message received [230] bytes :
+
+SIP/2.0 100 Trying
+Via: SIP/2.0/UDP 10.189.219.4:5061;received=10.189.219.4;branch=z9hG4bK-16465-1-0
+Call-ID: 1-16465@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>
+CSeq: 1 INVITE
+Content-Length:  0
+
+
+-----------------------------------------------
+Unexpected UDP message received:
+
+SIP/2.0 100 Trying
+Via: SIP/2.0/UDP 10.189.219.4:5061;received=10.189.219.4;branch=z9hG4bK-16465-1-0
+Call-ID: 1-16465@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>
+CSeq: 1 INVITE
+Content-Length:  0
+
+
+----------------------------------------------- 2019-06-19 18:39:24.297996
+UDP message received [265] bytes :
+
+SIP/2.0 500 
+Via: SIP/2.0/UDP 10.189.219.4:5061;received=10.189.219.4;branch=z9hG4bK-16465-1-0
+Call-ID: 1-16465@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>;tag=1d1f6c0b-2e4e-4b9c-9901-84f6e561e2aa
+CSeq: 1 INVITE
+Content-Length:  0
+
+
+-----------------------------------------------
+Unexpected UDP message received:
+
+SIP/2.0 500 
+Via: SIP/2.0/UDP 10.189.219.4:5061;received=10.189.219.4;branch=z9hG4bK-16465-1-0
+Call-ID: 1-16465@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>;tag=1d1f6c0b-2e4e-4b9c-9901-84f6e561e2aa
+CSeq: 1 INVITE
+Content-Length:  0
+
+
+----------------------------------------------- 2019-06-19 18:39:24.798349
+UDP message received [265] bytes :
+
+SIP/2.0 500 
+Via: SIP/2.0/UDP 10.189.219.4:5061;received=10.189.219.4;branch=z9hG4bK-16465-1-0
+Call-ID: 1-16465@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>;tag=1d1f6c0b-2e4e-4b9c-9901-84f6e561e2aa
+CSeq: 1 INVITE
+Content-Length:  0
+
+
+-----------------------------------------------
+Unexpected UDP message received:
+
+SIP/2.0 500 
+Via: SIP/2.0/UDP 10.189.219.4:5061;received=10.189.219.4;branch=z9hG4bK-16465-1-0
+Call-ID: 1-16465@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>;tag=1d1f6c0b-2e4e-4b9c-9901-84f6e561e2aa
+CSeq: 1 INVITE
+Content-Length:  0
+
+
+----------------------------------------------- 2019-06-19 18:39:25.798463
+UDP message received [265] bytes :
+
+SIP/2.0 500 
+Via: SIP/2.0/UDP 10.189.219.4:5061;received=10.189.219.4;branch=z9hG4bK-16465-1-0
+Call-ID: 1-16465@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>;tag=1d1f6c0b-2e4e-4b9c-9901-84f6e561e2aa
+CSeq: 1 INVITE
+Content-Length:  0
+
+
+-----------------------------------------------
+Unexpected UDP message received:
+
+SIP/2.0 500 
+Via: SIP/2.0/UDP 10.189.219.4:5061;received=10.189.219.4;branch=z9hG4bK-16465-1-0
+Call-ID: 1-16465@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>;tag=1d1f6c0b-2e4e-4b9c-9901-84f6e561e2aa
+CSeq: 1 INVITE
+Content-Length:  0
+
+
+----------------------------------------------- 2019-06-19 18:39:27.798302
+UDP message received [265] bytes :
+
+SIP/2.0 500 
+Via: SIP/2.0/UDP 10.189.219.4:5061;received=10.189.219.4;branch=z9hG4bK-16465-1-0
+Call-ID: 1-16465@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>;tag=1d1f6c0b-2e4e-4b9c-9901-84f6e561e2aa
+CSeq: 1 INVITE
+Content-Length:  0
+
+
+-----------------------------------------------
+Unexpected UDP message received:
+
+SIP/2.0 500 
+Via: SIP/2.0/UDP 10.189.219.4:5061;received=10.189.219.4;branch=z9hG4bK-16465-1-0
+Call-ID: 1-16465@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>;tag=1d1f6c0b-2e4e-4b9c-9901-84f6e561e2aa
+CSeq: 1 INVITE
+Content-Length:  0
+
+
+----------------------------------------------- 2019-06-19 18:39:31.797734
+UDP message received [265] bytes :
+
+SIP/2.0 500 
+Via: SIP/2.0/UDP 10.189.219.4:5061;received=10.189.219.4;branch=z9hG4bK-16465-1-0
+Call-ID: 1-16465@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>;tag=1d1f6c0b-2e4e-4b9c-9901-84f6e561e2aa
+CSeq: 1 INVITE
+Content-Length:  0
+
+
+-----------------------------------------------
+Unexpected UDP message received:
+
+SIP/2.0 500 
+Via: SIP/2.0/UDP 10.189.219.4:5061;received=10.189.219.4;branch=z9hG4bK-16465-1-0
+Call-ID: 1-16465@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>;tag=1d1f6c0b-2e4e-4b9c-9901-84f6e561e2aa
+CSeq: 1 INVITE
+Content-Length:  0
+
+
+----------------------------------------------- 2019-06-19 18:39:35.798148
+UDP message received [265] bytes :
+
+SIP/2.0 500 
+Via: SIP/2.0/UDP 10.189.219.4:5061;received=10.189.219.4;branch=z9hG4bK-16465-1-0
+Call-ID: 1-16465@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>;tag=1d1f6c0b-2e4e-4b9c-9901-84f6e561e2aa
+CSeq: 1 INVITE
+Content-Length:  0
+
+
+-----------------------------------------------
+Unexpected UDP message received:
+
+SIP/2.0 500 
+Via: SIP/2.0/UDP 10.189.219.4:5061;received=10.189.219.4;branch=z9hG4bK-16465-1-0
+Call-ID: 1-16465@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>;tag=1d1f6c0b-2e4e-4b9c-9901-84f6e561e2aa
+CSeq: 1 INVITE
+Content-Length:  0
+
+
+----------------------------------------------- 2019-06-19 18:39:39.797690
+UDP message received [265] bytes :
+
+SIP/2.0 500 
+Via: SIP/2.0/UDP 10.189.219.4:5061;received=10.189.219.4;branch=z9hG4bK-16465-1-0
+Call-ID: 1-16465@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>;tag=1d1f6c0b-2e4e-4b9c-9901-84f6e561e2aa
+CSeq: 1 INVITE
+Content-Length:  0
+
+
+-----------------------------------------------
+Unexpected UDP message received:
+
+SIP/2.0 500 
+Via: SIP/2.0/UDP 10.189.219.4:5061;received=10.189.219.4;branch=z9hG4bK-16465-1-0
+Call-ID: 1-16465@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>;tag=1d1f6c0b-2e4e-4b9c-9901-84f6e561e2aa
+CSeq: 1 INVITE
+Content-Length:  0
+
+
+----------------------------------------------- 2019-06-19 18:39:43.798112
+UDP message received [265] bytes :
+
+SIP/2.0 500 
+Via: SIP/2.0/UDP 10.189.219.4:5061;received=10.189.219.4;branch=z9hG4bK-16465-1-0
+Call-ID: 1-16465@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>;tag=1d1f6c0b-2e4e-4b9c-9901-84f6e561e2aa
+CSeq: 1 INVITE
+Content-Length:  0
+
+
+-----------------------------------------------
+Unexpected UDP message received:
+
+SIP/2.0 500 
+Via: SIP/2.0/UDP 10.189.219.4:5061;received=10.189.219.4;branch=z9hG4bK-16465-1-0
+Call-ID: 1-16465@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>;tag=1d1f6c0b-2e4e-4b9c-9901-84f6e561e2aa
+CSeq: 1 INVITE
+Content-Length:  0
+
+
+----------------------------------------------- 2019-06-19 18:39:47.798353
+UDP message received [265] bytes :
+
+SIP/2.0 500 
+Via: SIP/2.0/UDP 10.189.219.4:5061;received=10.189.219.4;branch=z9hG4bK-16465-1-0
+Call-ID: 1-16465@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>;tag=1d1f6c0b-2e4e-4b9c-9901-84f6e561e2aa
+CSeq: 1 INVITE
+Content-Length:  0
+
+
+-----------------------------------------------
+Unexpected UDP message received:
+
+SIP/2.0 500 
+Via: SIP/2.0/UDP 10.189.219.4:5061;received=10.189.219.4;branch=z9hG4bK-16465-1-0
+Call-ID: 1-16465@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>;tag=1d1f6c0b-2e4e-4b9c-9901-84f6e561e2aa
+CSeq: 1 INVITE
+Content-Length:  0
+
+

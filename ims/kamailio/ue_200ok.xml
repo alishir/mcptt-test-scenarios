@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE scenario SYSTEM "sipp.dtd">
+
+<scenario name="Simple UA Registeration to Kamailio">
+  <send crlf="true">
+    <![CDATA[
+    SIP/2.0 200 OK
+    Via: SIP/2.0/[transport] [local_ip]:[local_port];branch=[branch]
+    Contact: <sip:mcptt_c1@[local_ip]:[local_port]>
+    Max-Forwards: 70
+    To: <sip:[field0]>
+    From: <sip:[field0]>;tag=[call_number]
+    Call-ID: [call_id] 
+    CSeq: [cseq] REGISTER
+    User-Agent: MCPTT-UA 
+    Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+    Content-Length: 0
+
+    ]]>
+  </send>
+  <recv response="401" auth="true" crlf="true"/>
+  <send crlf="true">
+    <![CDATA[
+    SIP/2.0 200 OK
+    Via: SIP/2.0/[transport] [local_ip]:[local_port];branch=[branch]
+    Contact: <sip:mcptt_c1@[local_ip]:[local_port]>
+    Max-Forwards: 70
+    To: <sip:[field0]>
+    From: <sip:[field0]>;tag=[call_number]
+    [field1]
+    Call-ID: [call_id] 
+    CSeq: [cseq] REGISTER
+    User-Agent: MCPTT-UA 
+    Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+    Content-Length: 0
+
+    ]]>
+  </send>
+</scenario>

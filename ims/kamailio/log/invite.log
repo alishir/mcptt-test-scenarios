@@ -1,0 +1,40 @@
+----------------------------------------------- 2019-06-25 10:43:25.034106
+UDP message sent (395 bytes):
+
+REGISTER sip:192.168.1.21;transport=UDP SIP/2.0
+Via: SIP/2.0/UDP 10.189.219.4:5060;branch=z9hG4bK-19962-1-0
+Contact: <sip:mcptt_c1@10.189.219.4:5060>
+Max-Forwards: 70
+To: <sip:ali@127.0.0.1>
+From: <sip:ali@127.0.0.1>;tag=1
+Call-ID: 1-19962@10.189.219.4
+CSeq: 1 REGISTER
+User-Agent: MCPTT-UA
+Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+Content-Length: 0
+
+
+----------------------------------------------- 2019-06-25 10:43:25.036736
+UDP message received [205] bytes :
+
+SIP/2.0 200 OK
+CSeq: 1 REGISTER
+Call-ID: 1-19962@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>
+Via: SIP/2.0/UDP 10.189.219.4:5060;branch=z9hG4bK-19962-1-0
+Content-Length: 0
+
+
+-----------------------------------------------
+Unexpected UDP message received:
+
+SIP/2.0 200 OK
+CSeq: 1 REGISTER
+Call-ID: 1-19962@10.189.219.4
+From: <sip:ali@127.0.0.1>;tag=1
+To: <sip:ali@127.0.0.1>
+Via: SIP/2.0/UDP 10.189.219.4:5060;branch=z9hG4bK-19962-1-0
+Content-Length: 0
+
+
