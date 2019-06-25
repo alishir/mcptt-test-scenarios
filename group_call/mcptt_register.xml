@@ -2,18 +2,16 @@
 <!DOCTYPE scenario SYSTEM "sipp.dtd">
 
 <scenario name="Group Call Originator">
-  <pause milliseconds="1000"/>
-  <!-- Initiate group call -->
   <send>
     <![CDATA[
-    INVITE sip:MCPTT@[remote_ip]:[remote_port];transport=[transport] SIP/2.0
+    REGISTER sip:mcptt@[remote_ip]:[remote_port];transport=[transport] SIP/2.0
     Via: SIP/2.0/[transport] [local_ip]:[local_port];branch=[branch]
     Contact: <sip:[service]@[local_ip]:[local_port]>
     Max-Forwards: 70
-    To: MCPTT-Server <sip:MCPTT@[remote_ip]:[remote_port]>
+    To: MCPTT-Server <sip:mcptt@[remote_ip]:[remote_port]>
     From: mcptt_c1 <sip:[service]@[local_ip]:[local_port]>;tag=[call_number]
     Call-ID: [call_id] 
-    CSeq: [cseq] INVITE 
+    CSeq: [cseq] REGISTER
     User-Agent: MCPTT-UA 
     Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
     Content-Length: 0
