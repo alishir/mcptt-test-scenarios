@@ -21,4 +21,17 @@
     ]]>
   </send>
   <recv response="200"/>
+  <send>
+    <![CDATA[
+      ACK sip:MCPTT@[remote_ip]:[remote_port];transport=[transport] SIP/2.0
+      Via: SIP/2.0/[transport] [local_ip]:[local_port];branch=[branch]
+      From: sipp <sip:[service]@[local_ip]:[local_port]>;tag=[call_number]
+      To: MCPTT-Server <sip:MCPTT@[remote_ip]:[remote_port]>[peer_tag_param]
+      Call-ID: [call_id]
+      CSeq: 1 ACK
+      Contact: <sip:[service]@[local_ip]:[local_port]>
+      Max-Forwards: 70
+      Content-Length: 0
+    ]]>
+  </send>
 </scenario>
