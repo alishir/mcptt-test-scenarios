@@ -10,4 +10,9 @@ features and `ffmpeg`.
 # Running Test
 Just run the `./runner.sh` script.
 
+# Verification
+After running the `./runner.sh` two new `.wav` file should be created in the
+current directory, the name of new files are `mcptt_02.wav` and `mcptt_03.wav`.
+The content of these new files should be identical with `file.wav`. You can 
+verify this by `ffplay <file_name>`.
 
