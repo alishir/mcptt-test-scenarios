@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE scenario SYSTEM "sipp.dtd">
+
+<scenario name="Group Call Originator">
+  <send>
+    <![CDATA[
+    REGISTER sip:mcptt@[remote_ip]:[remote_port];transport=[transport] SIP/2.0
+    Via: SIP/2.0/[transport] [local_ip]:[local_port];branch=[branch]
+    Contact: sip:[service]@[local_ip]:[local_port];+g.3gpp.icsi-ref="urn%3Aurn-7%3A3gpp-service.ims.icsi.mcptt";+g.3gpp.mcptt
+    Max-Forwards: 70
+    To: MCPTT-Server <sip:mcptt@[remote_ip]:[remote_port]>
+    From: mcptt_c1 <sip:[service]@[local_ip]:[local_port]>;tag=[call_number]
+    Call-ID: [call_id] 
+    CSeq: [cseq] REGISTER
+    User-Agent: MCPTT-UA
+    Content-Type: application/vnd.3gpp.mcptt-info+xml
+    Content-Length: [len]
+
+    <?xml version="1.0" encoding="UTF-8"?>
+      <mcpttinfo xmlns="urn:3gpp:ns:mcpttInfo:1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <mcptt-Params>
+          <mcptt-access-token type="Normal">
+	        <mcpttString>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dnZWRJbkFzIjoiYWRtaW4iLCJpYXQiOjE0MjI3Nzk2Mzh9.gzSraSYS8EXBxLN_oWnFSRgCzcmJmMjLiuyu5CSpyHI</mcpttString>
+          </mcptt-access-token>
+          <mcptt-client-id type="Normal">
+            <mcpttString>urn:uuid:00000000-0000-1000-8000-AABBCCDDEEFF</mcpttString>
+          </mcptt-client-id>
+        </mcptt-Params>
+      </mcpttinfo>
+
+    ]]>
+  </send>
+  <recv response="200"/>
+</scenario>
