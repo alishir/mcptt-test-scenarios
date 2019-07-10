@@ -15,7 +15,7 @@ case: `docker -it clearewater-docker_ellis_1 bash`.
 After successfull login to Ellis node we should edit
 `/usr/local/share/clearwater/ellis/web-content/app-server.json` and
 add the application server entry.
-Here is the content of `app-server.json`:
+Here is the content of `app-server.json` as a sample Initial Filter Criteria (IFC) file:
 
 ```json
 {
