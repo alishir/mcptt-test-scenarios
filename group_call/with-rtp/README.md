@@ -1,6 +1,6 @@
 # Requirments
 In order to run test successfully you should install `sipp` with all optional 
-features and `ffmpeg`.
+features and `ffmpeg` (`ffmpeg` needs no additional configuration after installation).
 
 ## Building SIPp
 - clone SIPp
