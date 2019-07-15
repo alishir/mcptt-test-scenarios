@@ -16,3 +16,4 @@ current directory, the name of new files are `mcptt_02.wav` and `mcptt_03.wav`.
 The content of these new files should be identical to `file.wav`. You can 
 verify this by playing these files with `ffplay <file_name>`.
 
+ffmpeg -f pulse -t 10 -ac 1 -ar 8000 -i default -acodec pcm_alaw -y test.wav

@@ -61,7 +61,7 @@
 
   <nop>
     <action>
-      <exec command="ffmpeg -f rtp -i rtp://[media_ip]:13300 [service].wav"/>
+      <exec command="ffmpeg -y -f rtp -i rtp://[media_ip]:13300 [service].wav"/>
     </action>
   </nop>
 
