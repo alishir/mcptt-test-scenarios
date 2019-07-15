@@ -2,16 +2,12 @@
 
 PCSCF=$1
 NAME=$2
-
-echo "Killing all SIPp instances ..."
-pkill -9 sipp
-pkill -9 ffmpeg
+IP=$3
 
 # Register 
-sipp -t u1 -p 5070 $PCSCF -nd -sf ./mcptt_register.xml -s $NAME -m 1 -bg -nostdin
+sipp -i $IP -t u1 -p 5070 $PCSCF -nd -sf ./mcptt_register.xml -s $NAME -m 1 -bg -nostdin
 
 sleep 2
-pkill -9 sipp
 
 echo "Starting Caller ..."
-sipp -t u1 -p 5070 $PCSCF -nd -sf ./caller.xml -mp 8000 -s $NAME -m 1 
+sipp -i $IP -t u1 -p 5070 $PCSCF -nd -sf ./caller.xml -mp 8000 -s $NAME -m 1  -trace_msg -message_file log/caller.log
