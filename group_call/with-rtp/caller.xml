@@ -62,7 +62,7 @@
 
   <nop>
     <action>
-      <exec rtp_stream="file.wav,4"/>
+      <exec rtp_stream="file.wav"/>
     </action>
   </nop>
 
