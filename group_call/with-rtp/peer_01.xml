@@ -2,8 +2,15 @@
 <!DOCTYPE scenario SYSTEM "sipp.dtd">
 
 <scenario name="Group Call Client 2">
+  <nop>
+    <action>
+      <exec command="ffmpeg -y -f rtp -i rtp://[media_ip]:13300 [service].wav"/>
+    </action>
+  </nop>
+
   <!-- wait for group call request -->
   <recv request="INVITE"/>
+
   <send>
     <![CDATA[
     SIP/2.0 200 OK
@@ -58,12 +65,6 @@
 
     ]]>
   </send>
-
-  <nop>
-    <action>
-      <exec command="ffmpeg -y -f rtp -i rtp://[media_ip]:13300 [service].wav"/>
-    </action>
-  </nop>
 
 
   <recv request="ACK"/>
