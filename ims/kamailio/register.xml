@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <!DOCTYPE scenario SYSTEM "sipp.dtd">
 
-<scenario name="Simple UA Registeration to clearwater IMS">
+<scenario name="Simple UA Registeration IMS">
   <send crlf="true">
     <![CDATA[
     REGISTER sip:192.168.1.21;transport=[transport] SIP/2.0
@@ -14,6 +14,7 @@
     CSeq: [cseq] REGISTER
     User-Agent: MCPTT-UA 
     Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+    Content-Type: application/vnd.3gpp.mcptt-info+xml
     Content-Length: 0
 
     ]]>
@@ -32,6 +33,7 @@
     CSeq: [cseq] REGISTER
     User-Agent: MCPTT-UA 
     Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
+    Content-Type: application/vnd.3gpp.mcptt-info+xml
     Content-Length: 0
 
     ]]>
