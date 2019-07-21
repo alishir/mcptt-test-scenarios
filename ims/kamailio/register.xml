@@ -15,7 +15,19 @@
     User-Agent: MCPTT-UA 
     Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
     Content-Type: application/vnd.3gpp.mcptt-info+xml
-    Content-Length: 0
+    Content-Length: [len]
+
+    <?xml version="1.0" encoding="UTF-8"?>
+      <mcpttinfo xmlns="urn:3gpp:ns:mcpttInfo:1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <mcptt-Params>
+          <mcptt-access-token type="Normal">
+	        <mcpttString>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dnZWRJbkFzIjoiYWRtaW4iLCJpYXQiOjE0MjI3Nzk2Mzh9.gzSraSYS8EXBxLN_oWnFSRgCzcmJmMjLiuyu5CSpyHI</mcpttString>
+          </mcptt-access-token>
+          <mcptt-client-id type="Normal">
+            <mcpttString>urn:uuid:00000000-0000-1000-8000-AABBCCDDEEFF</mcpttString>
+          </mcptt-client-id>
+        </mcptt-Params>
+      </mcpttinfo>
 
     ]]>
   </send>
@@ -34,7 +46,19 @@
     User-Agent: MCPTT-UA 
     Allow: INVITE,ACK,BYE,CANCEL,OPTIONS,NOTIFY,SUBSCRIBE,INFO,MESSAGE,REFER
     Content-Type: application/vnd.3gpp.mcptt-info+xml
-    Content-Length: 0
+    Content-Length: [len]
+
+    <?xml version="1.0" encoding="UTF-8"?>
+      <mcpttinfo xmlns="urn:3gpp:ns:mcpttInfo:1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <mcptt-Params>
+          <mcptt-access-token type="Normal">
+	        <mcpttString>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2dnZWRJbkFzIjoiYWRtaW4iLCJpYXQiOjE0MjI3Nzk2Mzh9.gzSraSYS8EXBxLN_oWnFSRgCzcmJmMjLiuyu5CSpyHI</mcpttString>
+          </mcptt-access-token>
+          <mcptt-client-id type="Normal">
+            <mcpttString>urn:uuid:00000000-0000-1000-8000-AABBCCDDEEFF</mcpttString>
+          </mcptt-client-id>
+        </mcptt-Params>
+      </mcpttinfo>
 
     ]]>
   </send>
